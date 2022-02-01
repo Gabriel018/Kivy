@@ -14,19 +14,17 @@ class MyApp(App):
 
     def build(self):
      box = BoxLayout(orientation= 'vertical')
-     text = TextInput(font_size = 50,height=50)
+     text = TextInput(font_size = 30,height=80 , size_hint_y=None,)
      s = Scatter()
      float = FloatLayout()
-     lbs = Label(Text= 'Ola',font_size=30)
+     lbs = Label(font_size=30)
 
      float.add_widget(s)
      s.add_widget(lbs)
      box.add_widget(text)
      box.add_widget(float)
 
-
-
-     text.bind(lbs.setter('text'))
+     text.bind(text=lbs.setter('text'))
      return box
 
 if __name__ == '__main__':
