@@ -1,12 +1,23 @@
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.gridlayout import GridLayout
 from kivy.lang import Builder
+from kivy.uix.textinput import TextInput
 
 
 kv = ''' 
-BoxLayout:
+GridLayout:
+
+    cols:2
+    rows:2
+    padding:20
+    spacing:20
     Label:
-        text:"Ola Mundo"
+        text:"Digite seu nome"
+    TextInput:          
+    Label:
+        text:"Digite sua senha"
+    TextInput:   
      '''
 
 class lang(App):
