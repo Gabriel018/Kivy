@@ -1,15 +1,8 @@
-<lbl>:
-    BoxLayout:
-        orientation: 'vertical'
-        Label:
-            font_size:18
-            text:'Estudar'
-        Label:
-            font_size:18
-            text:'Correr'
-        Label:
-            font_size:18
-            text:'Ler'
-        Label:
-            font_size:18
-            text:'Atirar'
+<Start>:
+    GridLayout:
+        cols: 3
+        id:grid
+        height:
+        Button:
+            text:'Adiciona'
+            on_press:root.add_btn()

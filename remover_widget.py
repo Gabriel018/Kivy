@@ -1,14 +1,15 @@
 from kivy.app import App
 from kivy.uix.label import Label
 from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.screenmanager import Screen
 
-class lbl(BoxLayout):
-    pass
+class Start(Screen):
+    def add_btn(self):
+        new_lbl = Label(text='Ola Mundo')
+        self.ids.grid.add_widget(new_lbl)
 
-class teste_remove(App):
+class Main(App):
     def build(self):
-        return lbl()
-
-
-
-teste_remove().run()
+        return Start()
+if __name__ == '__main__':
+    Main().run()
