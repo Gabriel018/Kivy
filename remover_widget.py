@@ -7,6 +7,8 @@ class Start(Screen):
     def add_btn(self):
         new_lbl = Label(text='Ola Mundo')
         self.ids.grid.add_widget(new_lbl)
+    def remove_btn(self):
+        self.ids.grid.remove_widget(self.ids.label)
 
 class Main(App):
     def build(self):

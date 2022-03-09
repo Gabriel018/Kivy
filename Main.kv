@@ -1,8 +1,15 @@
 <Start>:
     GridLayout:
-        cols: 3
+        cols:4
+        row:3
         id:grid
-        height:
+        height: 100
         Button:
             text:'Adiciona'
             on_press:root.add_btn()
+        Button:
+            text:'Remover'
+            on_press:root.remove_btn()
+        Label:
+            id:label
+            text:'Concluido'
