@@ -25,12 +25,13 @@ class MyLayout(GridLayout):
         self.Enviar.bind(on_press=self.press)
         self.add_widget(self.Enviar)
 
+
+
     def press(self,instance):
         name = self.name.text
         last_name = self.last_name.text
         curso = self.curso.text
-
-        print(f'Boa tarde,{name}{last_name}, seu curso escolhido foi,{curso}')
+        self.add_widget(Label(text=f'Boa tarde,{name}{last_name}, seu curso escolhido foi,{curso}'))
 
 class Myapp(App):
     def build(self):
