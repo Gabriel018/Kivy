@@ -8,22 +8,28 @@ from kivy.uix.button import Button
 class MyLayout(GridLayout):
     def __init__(self,**kwargs):
         super(MyLayout,self).__init__(**kwargs)
-        self.cols = 2
-        self.add_widget(Label(text='Name: '))
+        self.cols = 1
+        self.maingrid = GridLayout()
+        self.maingrid.cols = 2
+
+        self.maingrid.add_widget(Label(text='Name: '))
         self.name = TextInput(multiline=False)
-        self.add_widget(self.name)
+        self.maingrid.add_widget(self.name)
 
-        self.add_widget(Label(text='Last_Name: '))
+        self.maingrid.add_widget(Label(text='Last_Name: '))
         self.last_name = TextInput(multiline=False)
-        self.add_widget(self.last_name)
+        self.maingrid.add_widget(self.last_name)
 
-        self.add_widget(Label(text='Curso: '))
+        self.maingrid.add_widget(Label(text='Curso: '))
         self.curso = TextInput(multiline=False)
-        self.add_widget(self.curso)
+        self.maingrid.add_widget(self.curso)
+
+        self.add_widget(self.maingrid)
 
         self.Enviar = Button(text='Enviar')
         self.Enviar.bind(on_press=self.press)
         self.add_widget(self.Enviar)
+
 
 
 
